@@ -18,12 +18,15 @@ defmodule AssocApiWeb.Router do
 
     get "/", PageController, :index
   end
+
   scope "/api", AssocApiWeb do
     pipe_through :api
+
     resources "/user", UserController, except: [:new, :edit] do
       resources "/avatar", AvatarController, except: [:new, :edit]
       resources "/posts", PostController, except: [:new, :edit]
     end
+
     resources "/tags", TagsController, except: [:new, :edit]
     put "/add_tags_to_post/:post_id/tags/:tag_id", PostTagController, :update
   end

@@ -3,9 +3,9 @@ defmodule AssocApi.Post do
 
   schema "posts" do
     field :header, :string
-    field :body , :string
+    field :body, :string
     belongs_to :user, AssocApi.User
-    many_to_many :tags, AssocApi.Tag, join_through: "posts_tags" , on_delete: :delete_all
+    many_to_many :tags, AssocApi.Tag, join_through: "posts_tags", on_delete: :delete_all
   end
 
   def changeset(post, attrs \\ %{}) do
