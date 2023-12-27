@@ -6,6 +6,5 @@ defmodule EctoAssoc.Repo.Migrations.CreateUser do
       add :name, :string
       add :email, :string
     end
-
   end
 end

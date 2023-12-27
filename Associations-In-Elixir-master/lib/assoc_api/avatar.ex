@@ -11,6 +11,5 @@ defmodule AssocApi.Avatar do
     avatar
     |> Ecto.Changeset.cast(params, [:nick_name, :pic_url, :user_id])
     |> Ecto.Changeset.validate_required([:nick_name, :pic_url, :user_id])
-
   end
 end

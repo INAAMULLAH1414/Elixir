@@ -6,6 +6,7 @@ defmodule EctoAssoc.Repo.Migrations.CreatePostsTags do
       add :tag_id, references(:tags)
       add :post_id, references(:posts)
     end
+
     create unique_index(:posts_tags, [:tag_id, :post_id])
   end
 end
