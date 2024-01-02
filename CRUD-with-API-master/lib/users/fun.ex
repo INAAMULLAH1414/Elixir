@@ -1,5 +1,4 @@
 defmodule Users.Fun do
-
   import Ecto.Query, warn: false
   alias Users.Repo
 
@@ -30,7 +29,4 @@ defmodule Users.Fun do
     |> Students.changeset(attrs)
     |> Repo.update()
   end
-
-
-
 end

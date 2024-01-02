@@ -4,13 +4,11 @@ defmodule UsersWeb.StudentController do
   alias Users.Fun
   alias Users.Students
 
-
   action_fallback UsersWeb.FallbackController
 
-
   def index(conn, _params) do
-      students=Fun.all()
-      render(conn, "index.json", students: students)
+    students = Fun.all()
+    render(conn, "index.json", students: students)
   end
 
   def create(conn, %{"students" => student_params}) do
@@ -23,7 +21,7 @@ defmodule UsersWeb.StudentController do
   end
 
   def show(conn, %{"id" => id}) do
-    student= Fun.get!(id)
+    student = Fun.get!(id)
     render(conn, "show.json", student: student)
   end
 
@@ -42,5 +40,4 @@ defmodule UsersWeb.StudentController do
       send_resp(conn, :no_content, "")
     end
   end
-
 end

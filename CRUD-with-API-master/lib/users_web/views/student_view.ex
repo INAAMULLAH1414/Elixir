@@ -12,10 +12,12 @@ defmodule UsersWeb.StudentView do
   end
 
   def render("student.json", %{student: students}) do
-    %{id: students.id,
+    %{
+      id: students.id,
       name: students.name,
       fname: students.fname,
       age: students.age,
-      email: students.email}
+      email: students.email
+    }
   end
 end

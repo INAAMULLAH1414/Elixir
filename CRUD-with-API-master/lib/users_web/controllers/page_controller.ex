@@ -5,7 +5,7 @@ defmodule UsersWeb.PageController do
     render(conn, "index.html")
   end
 
- # def index(conn, _params) do
- #   text conn, "Hello I am API!"
- # end
+  # def index(conn, _params) do
+  #   text conn, "Hello I am API!"
+  # end
 end
