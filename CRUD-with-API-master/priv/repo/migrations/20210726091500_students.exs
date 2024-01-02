@@ -7,7 +7,6 @@ defmodule Users.Repo.Migrations.Students do
       add :fname, :string
       add :age, :integer
       add :email, :string
-
     end
   end
 end

@@ -12,5 +12,11 @@
 alias Users.Repo
 alias Users.Students
 
-Repo.insert! %Students{name: "Abdul Rehman", fname: "Abdul Raouf", age: 18, email: "abdulrehman@gmail.com"}
-Repo.insert! %Students{name: "Hamza", fname: "Ghafoor", age: 18, email: "hamza@gmail.com"}
+Repo.insert!(%Students{
+  name: "Abdul Rehman",
+  fname: "Abdul Raouf",
+  age: 18,
+  email: "abdulrehman@gmail.com"
+})
+
+Repo.insert!(%Students{name: "Hamza", fname: "Ghafoor", age: 18, email: "hamza@gmail.com"})

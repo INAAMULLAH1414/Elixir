@@ -12,6 +12,7 @@ defmodule UsersWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
+
   scope "/api", UsersWeb do
     pipe_through :api
     resources "/students", StudentController, except: [:new, :edit]
@@ -25,13 +26,10 @@ defmodule UsersWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    #resources "/students", StudentController
-
+    # resources "/students", StudentController
   end
 
-
   # Other scopes may use custom stacks.
-
 
   # Enables LiveDashboard only for development
   #
