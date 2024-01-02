@@ -1,4 +1,5 @@
 defmodule UsersWeb.Gettext do
+  use Gettext, otp_app: :users
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
@@ -20,5 +21,5 @@ defmodule UsersWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :users
+  Application.compile_env(:assoc_api, AssocApiWeb.Gettext)
 end
