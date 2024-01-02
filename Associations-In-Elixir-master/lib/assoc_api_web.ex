@@ -7,6 +7,7 @@ defmodule AssocApiWeb do
 
       use AssocApiWeb, :controller
       use AssocApiWeb, :view
+      use Gettext
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
