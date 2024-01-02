@@ -1,5 +1,6 @@
 defmodule UsersWeb.Gettext do
   use Gettext, otp_app: :users
+
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
