@@ -7,6 +7,7 @@ defmodule UsersWeb do
 
       use UsersWeb, :controller
       use UsersWeb, :view
+      use Gettext
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
